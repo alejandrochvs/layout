@@ -1,0 +1,1 @@
+$('#landPage').css('height', $(window).height());

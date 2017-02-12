@@ -1,0 +1,54 @@
+.purchase {
+            margin-top: 2.5%;
+            margin-bottom: 2.5%;
+            padding: 0;
+            background: $dark;
+            .container-fluid {
+                .icon {
+                    .img {
+                        min-height: 84px;
+                        background: $yellow;
+                        background-image: url(../assets/icon-buy.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .description {
+                    min-height: 84px;
+                    color: whitesmoke;
+                    padding: 0% 0;
+                    p {
+                        h6 {
+                            font-size: 10%;
+                        }
+                    }
+                }
+                .btn {
+                    padding: 2% 0;
+                    min-height: 84px;
+                    background: $yellow;
+                    border-radius: 0;
+                    text-align: center;
+                }
+                @media (max-width: 767px) {
+                    padding: 0;
+                    .description {
+                        padding: 10px;
+                    }
+                    .icon {
+                        padding: 0;
+                    }
+                    .btn {
+                        min-height: 90px;
+                    }
+                }
+                @media (min-width: 768px) {
+                    .btn {
+                        h2 {
+                            position: relative;
+                            top: 20px;
+                        }
+                    }
+                }
+            }
+        }
