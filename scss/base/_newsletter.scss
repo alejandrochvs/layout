@@ -1,55 +1,59 @@
 .newsletter {
-            background: $dark;
-            color: whitesmoke;
-            .container-fluid {
-                height: 58px;
-                padding: 0;
-                .left {
-                    padding: 0;
-                    .title {
-                        padding: 13px;
-                    }
-                    .subtitle {
-                        padding: 10px;
-                        h6 {
-                            font-size: 10px;
-                        }
-                    }
-                    .icon {
-                        height: 58px;
-                        background-color: $yellow;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-image: url(../assets/icon-mail.png);
-                    }
-                }
-                .right {
-                    padding: 0;
-                    .email {
-                        background: lighten($dark, 20%);
-                        height: 58px;
-                        padding: 13px;
-                    }
-                    .sign-up {
-                        height: 58px;
-                        background: $yellow;
-                        color: $dark;
-                        padding: 12px;
-                    }
+    background: $dark;
+    color: whitesmoke;
+    .container-fluid {
+        height: 58px;
+        padding: 0;
+        .left {
+            padding: 0;
+            .title {
+                padding: 13px;
+            }
+            .subtitle {
+                padding: 15px;
+                h6 {
+                    font-size: 10px;
                 }
             }
-            @media (max-width: 767px) {
-                padding: 0;
-                margin-bottom: 70px;
-                .container-fluid {
-                    padding: 0;
-                    .left {
-                        padding: 0;
-                    }
-                    .right {
-                        min-height: 58px;
-                        padding: 0;
-                    }
+            .icon {
+                height: 58px;
+                background-color: $yellow;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../assets/icon-mail.png);
+            }
+        }
+        .right {
+            padding: 0;
+            .email {
+                background: lighten($dark, 20%);
+                height: 58px;
+                padding: 13px;
+            }
+            .sign-up {
+                height: 58px;
+                background: $yellow;
+                color: $dark;
+                padding: 12px;
+                @include transition(0.3);
+                &:hover {
+                    background: darken($yellow, 10%);
                 }
             }
         }
+    }
+    @media (max-width: 767px) {
+        padding: 0;
+        margin-bottom: 70px;
+        .container-fluid {
+            padding: 0;
+            .left {
+                padding: 0;
+            }
+            .right {
+                min-height: 58px;
+                padding: 0;
+            }
+        }
+    }
+}

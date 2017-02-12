@@ -1,45 +1,46 @@
 .news {
-            margin-top: 2.5%;
-            padding: 0;
-            .container-fluid {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 0;
+    .container-fluid {
+        padding: 0;
+        .controls {
+            .carousel-controls {
                 padding: 0;
-                .controls {
-                    .carousel-controls {
-                        padding: 0;
-                        .left {
-                            //@include frame(red);
-                            background: lightgray;
-                            color: whitesmoke;
-                            @include transition(0.3);
-                            i {
-                                text-align: center;
-                            }
-                            &:hover {
-                                background: darken(lightgray, 10%);
-                            }
-                        }
-                        .right {
-                            //@include frame(black);
-                            background: lightgray;
-                            color: whitesmoke;
-                            i {
-                                text-align: center;
-                            }
-                            &:hover {
-                                background: darken(lightgray, 10%);
-                            }
-                        }
+                .left {
+                    //@include frame(red);
+                    background: lightgray;
+                    color: whitesmoke;
+                    @include transition(0.3);
+                    i {
+                        text-align: center;
                     }
-                    //padding: 0;
-                    h3 {
-                        border-bottom: solid 3px lightgray;
-                        padding-bottom: 5%;
+                    &:hover {
+                        background: darken(lightgray, 10%);
                     }
                 }
-                .carousel {
-                    padding: 0;
-                    min-height: 140px;
-                    @include frame(black);
+                .right {
+                    //@include frame(black);
+                    background: lightgray;
+                    color: whitesmoke;
+                    i {
+                        text-align: center;
+                    }
+                    &:hover {
+                        background: darken(lightgray, 10%);
+                    }
                 }
             }
+            //padding: 0;
+            h3 {
+                border-bottom: solid 3px lightgray;
+                padding-bottom: 5%;
+            }
         }
+        .carousel {
+            padding: 0;
+            min-height: 140px;
+            @include frame(black);
+        }
+    }
+}
