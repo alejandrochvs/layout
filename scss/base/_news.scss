@@ -40,7 +40,51 @@
         .carousel {
             padding: 0;
             min-height: 140px;
-            @include frame(black);
+            //@include frame(black);
+            .slide {
+                .carousel-inner {
+                    .item {
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        .item-container {
+                            .img {
+                                background-image: url(../../assets/post-2-1.jpg);
+                                height: 80px;
+                                background-size: contain;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                            .titles {
+                                border-bottom: solid 4px lighten($dark, 50%);
+                            }
+                            .content {
+                                border-bottom: dotted 5px whitesmoke;
+                            }
+                            .button {
+                                background: $yellow;
+                                text-align: center;
+                                padding: 5px;
+                                height: 30px;
+                                width: 30px;
+                                @include transition(0.3);
+                                &:hover {
+                                    background: darken($yellow, 10%);
+                                }
+                            }
+                            &:nth-child(2){
+                                .img{
+                                    background-image: url(../../assets/post-2-2.jpg);
+                                }
+                            }
+                            &:nth-child(3){
+                                .img{
+                                    background-image: url(../../assets/post-2-3.jpg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

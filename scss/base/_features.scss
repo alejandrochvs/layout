@@ -1,45 +1,55 @@
 .features {
-            margin-top: 2.5%;
-            margin-bottom: 2.5%;
-            background: whitesmoke;
-            .container-fluid {
-                @include frame(red);
-                .features-img {
-                    //@include frame(black);
-                    background-image: url(../assets/features-icon.png);
-                    min-height: 200px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    padding: 1%;
-                }
-                .features-title {
-                    //@include frame(yellow);
-                    position: relative;
-                    top: 50px;
-                    border-bottom: solid 5px white;
-                }
-                .features-list {
-                    //@include frame(black);
-                    padding: 0;
-                    ul {
-                        padding: 0;
-                        list-style-type: none;
-                    }
-                    .img {
-                        min-height: 28px;
-                        background-image: url(../assets/features-check-icon.png);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                    }
-                }
-                @media (max-width: 767px) {
-                    .features-title {
-                        border-bottom: 0px;
-                    }
-                    .features-list {
-                        border-left: solid 5px white;
-                    }
-                }
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    background: whitesmoke;
+    .container-fluid {
+        //@include frame(red);
+        .features-img {
+            //@include frame(black);
+            background-image: url(../assets/features-icon.png);
+            min-height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 20px;
+            position: relative;
+            right: 10px;
+        }
+        .features-title {
+            //@include frame(yellow);
+            position: relative;
+            top: 50px;
+            border-bottom: solid 5px white;
+        }
+        .features-list {
+            //@include frame(black);
+            position: relative;
+            top: 15px;
+            padding: 0;
+            ul {
+                padding: 0;
+                list-style-type: none;
+            }
+            .img {
+                min-height: 28px;
+                background-image: url(../assets/features-check-icon.png);
+                background-position: center;
+                background-repeat: no-repeat;
             }
         }
+        @media (max-width: 767px) {
+            .featuresimg {
+                right: 0px;
+            }
+            .features-title {
+                border-bottom: 0px;
+                position: relative;
+                right: 30px;
+            }
+            .features-list {
+                border-left: solid 5px white;
+                top: 0;
+            }
+        }
+    }
+}

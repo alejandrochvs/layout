@@ -40,7 +40,28 @@
         .carousel {
             padding: 0;
             min-height: 140px;
-            @include frame(black);
+            //@include frame(black);
+            .slide{
+                .carousel-inner{
+                    .item{
+                        padding: 10px;
+                        .item-container{
+                            .img{
+                                img{
+                                    align-content: center;
+                                    height: 80px;
+                                }
+                            }
+                            .titles{
+                                h5{
+                                    border-bottom: solid 4px lighten($dark,50%);
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
