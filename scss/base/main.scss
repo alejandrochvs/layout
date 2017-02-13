@@ -1,0 +1,68 @@
+.landPage {
+    padding: 0;
+    background-image: url(../../assets/slider-bg-1.jpg);
+    .land {
+        margin-top: 3%;
+        padding: 0;
+        .navbar {
+            padding: 0;
+            border-radius: 0;
+            border:none;
+            .container-fluid{
+                background: $dark;
+                .navbar-collapse{
+                    float: none !important;
+                    @media (min-width: 768px){
+                        float: right !important;
+                    }
+                    ul{
+                        li.active{
+                            a{
+                                @include transition(0.3);
+                                background-color: $yellow;
+                                h6{
+                                    color: $dark;
+                                }
+                                &:hover{
+                                    background-color: darken($yellow,10%);
+                                }
+                            }
+                        }
+                        li{
+                            background-color: $dark;
+                            a{
+                                h6{
+                                    color: whitesmoke;
+                                    font-weight: bold;
+                                }
+                            }
+                            @include transition(0.3);
+                            &:hover{
+                                background-color: darken($yellow,10%);
+                                a{
+                                    h6{
+                                        color: $dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .navbar-header{
+                    .navbar-brand{
+                        img{
+                            width: 80px;
+                        }
+                    }
+                    .navbar-toggle{
+                        background-color: $dark;
+                        border-color: darken($dark,10%);
+                        span{
+                            background-color: $yellow;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
