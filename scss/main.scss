@@ -3,9 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
     .main {
+        background: whitesmoke;
         padding: 0;
-        height: 100%;
         @import 'base/main.scss';
+        .divider{
+            height: 5vh;
+            background: white;
+        }
         @import 'base/purchase.scss';
         @import 'base/portfolio.scss';
         @import 'base/features.scss';

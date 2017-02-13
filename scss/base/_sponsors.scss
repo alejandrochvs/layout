@@ -1,11 +1,12 @@
 .sponsors {
+    background: white;
+    padding: 0;
+    .container-fluid {
+        padding: 0;
+        img {
+            filter: grayscale(100%);
             padding: 0;
-            .container-fluid {
-                padding: 0;
-                img {
-                    filter: grayscale(100%);
-                    padding: 0;
-                    height: 100px;
-                }
-            }
+            height: 100px;
         }
+    }
+}

@@ -1,68 +1,180 @@
+#carousel-example-generic {
+    height: 40vh;
+    .carousel-inner {
+        .item {
+            img {
+                height: 70vh;
+            }
+            .carousel-caption {
+                position: absolute;
+                right: 0%;
+                bottom: 25vh;
+                left: 10%;
+                z-index: 10;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                color: #fff;
+                text-align: left;
+                text-shadow: none;
+                h2 {
+                    font-size: 350% !important;
+                    color: $dark;
+                    background-color: $yellow;
+                    width: 35vw;
+                    padding: 1%;
+                }
+                h4 {
+                    color: whitesmoke;
+                    background-color: $dark;
+                    width: 30vw;
+                    padding: 1%;
+                }
+                .btn {
+                    position: relative;
+                    top: 2vh;
+                    border-radius: 0;
+                    padding: 0;
+                    .right {
+                        background: $yellow;
+                    }
+                    .left {
+                        background: $dark;
+                    }
+                }
+            }
+            @media(max-width:768px) {
+                .carousel-caption {
+                    bottom: 20vh;
+                    h2 {
+                        width: 80vw;
+                    }
+                }
+            }
+            @media(max-width:424px) {
+                .carousel-caption {
+                    bottom: 15vh;
+                    h2 {
+                        width: 80vw;
+                    }
+                }
+            }
+        }
+    }
+}
 .landPage {
+    height: 55vh;
+    top: -35vh;
     padding: 0;
-    background-image: url(../../assets/slider-bg-1.jpg);
     .land {
-        margin-top: 3%;
         padding: 0;
         .navbar {
             padding: 0;
             border-radius: 0;
-            border:none;
-            .container-fluid{
+            border: none;
+            .container-fluid {
                 background: $dark;
-                .navbar-collapse{
+                padding-right: 0;
+                .navbar-collapse {
+                    padding: 0;
                     float: none !important;
-                    @media (min-width: 768px){
+                    @media (min-width: 768px) {
                         float: right !important;
                     }
-                    ul{
-                        li.active{
-                            a{
+                    ul {
+                        li.active {
+                            a {
                                 @include transition(0.3);
                                 background-color: $yellow;
-                                h6{
+                                h6 {
                                     color: $dark;
                                 }
-                                &:hover{
-                                    background-color: darken($yellow,10%);
+                                &:hover {
+                                    background-color: darken($yellow, 10%);
                                 }
                             }
                         }
-                        li{
+                        li {
                             background-color: $dark;
-                            a{
-                                h6{
+                            a {
+                                h6 {
+                                    @include transition(0.3);
+                                    text-align: center;
                                     color: whitesmoke;
                                     font-weight: bold;
                                 }
                             }
                             @include transition(0.3);
-                            &:hover{
-                                background-color: darken($yellow,10%);
-                                a{
-                                    h6{
+                            &:hover {
+                                background-color: darken($yellow, 10%);
+                                a {
+                                    h6 {
                                         color: $dark;
                                     }
+                                }
+                            }
+                            &:last-child {
+                                background: lighten($dark, 20%);
+                                @include transition(0.3);
+                                &:hover {
+                                    background: lighten($dark, 10%);
                                 }
                             }
                         }
                     }
                 }
-                .navbar-header{
-                    .navbar-brand{
-                        img{
+                .navbar-header {
+                    margin: 0;
+                    .navbar-brand {
+                        img {
                             width: 80px;
                         }
                     }
-                    .navbar-toggle{
+                    .navbar-toggle {
                         background-color: $dark;
-                        border-color: darken($dark,10%);
-                        span{
-                            background-color: $yellow;
+                        border-color: darken($dark, 10%);
+                        span {
+                            background-color: whitesmoke;
                         }
                     }
                 }
-            } 
+            }
+        }
+    }
+    .controller {
+        position: relative;
+        top: 35vh;
+        .btn {
+            @include transition(0.3);
+            background: $dark;
+            border-radius: 0;
+            i {
+                @include transition(0.3);
+                color: whitesmoke;
+            }
+            &:hover {
+                background: darken($yellow, 0%);
+                i {
+                    color: $dark;
+                }
+            }
+        }
+    }
+    .services{
+        position: relative;
+        top: 35vh;
+        margin-top: 5vh;
+        .box{
+            height: 30vh;
+            //@include frame(red);
+            &:nth-child(1){
+                background: white;
+            }&:nth-child(2){
+                background: $yellow;
+            }&:nth-child(3){
+                background: darken($yellow,2.5%);
+            }&:nth-child(4){
+                background: darken($yellow,5%);
+            }
         }
     }
 }
